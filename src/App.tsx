@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
 import DashboardPage from "./pages/DashboardPage";
+import LoginPage from "./pages/LoginPage";
 import { useAuthStore } from "./stores/authStore";
 
 function App() {
@@ -16,8 +17,7 @@ function App() {
   return (
     <Routes>
       <Route element={<PublicRoute />}>
-        <Route path="/login" element={<div>Login Page</div>} />
-        {/* <Route path="/register" element={<div>Register Page</div>} /> */}
+        <Route path="/login" element={<LoginPage />} />
       </Route>
 
       <Route element={<ProtectedRoute />}>
